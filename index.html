@@ -149,13 +149,38 @@ footer{text-align:center;padding:2em 0;color:var(--muted);}
 </section>
 
 <!-- BOTS -->
-<section class="reveal" style="text-align:center;">
+<section class="reveal" id="bots">
   <h2>Discord Bots</h2>
-  <img src="https://imgur.com/EtmacXo.png" alt="DRT-Bot" onclick="openModal(this.src)" style="max-width:500px;margin:auto;border-radius:10px;">
-  <p style="margin-top:1.5em;color:var(--muted);">
-    <strong>DRT-Bot:</strong> Manages tournament sign-ups, announces brackets, and syncs with DRT-C.
-  </p>
+  <div class="container">
+    <!-- DRT-Bot -->
+    <div class="card">
+      <img src="https://imgur.com/EtmacXo.png" alt="DRT-Bot" onclick="openModal(this.src)">
+      <div style="padding:1em;">
+        <h3>DRT-Bot</h3>
+        <p style="color:var(--muted);">
+          Manages tournament sign-ups, announces brackets, and syncs with DRT-C.  
+          Features admin commands, live match tracking, and nickname support.
+        </p>
+      </div>
+    </div>
+
+    <!-- Crystal Clock -->
+    <div class="card">
+      <img src="https://raw.githubusercontent.com/nilah-xiv/Nilah-Auction/refs/heads/main/crystalclock_weekly.png" alt="Crystal Clock" onclick="openModal(this.src)">
+      <div style="padding:1em;">
+        <h3>Crystal Clock</h3>
+        <p style="color:var(--muted);">
+          Crystal Clock automates your venue’s weekly schedule — creating fully formatted
+  event embeds with timezone-correct start/end times, capacity tracking, and 
+  role-aware signup lists. Staff can confirm, sign up, or be assigned directly 
+  through Discord, and the bot keeps the roster updated in real time.
+        </p>
+        <a href="https://github.com/nilah-xiv/Crystal-Clock" target="_blank" style="color:var(--accent);">View on GitHub</a>
+      </div>
+    </div>
+  </div>
 </section>
+
 
 <!-- SITES -->
 <section class="reveal" id="sites">
@@ -238,4 +263,5 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
 </script>
 </body>
 </html>
+
 
