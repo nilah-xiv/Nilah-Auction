@@ -47,8 +47,6 @@ button { font: inherit; }
 .site-nav { display: flex; align-items: center; gap: 35px; color: var(--muted); font-size: 12px; font-weight: 700; }
 .site-nav a { text-decoration: none; transition: color .2s ease; }
 .site-nav a:hover, .text-link:hover { color: var(--pink); }
-.site-nav .nav-github { padding: 10px 15px; border: 1px solid var(--line); border-radius: 999px; color: var(--text); }
-.nav-github span { margin-left: 6px; color: var(--pink); }
 .menu-toggle { display: none; }
 
 .hero {
@@ -108,8 +106,9 @@ h1 > span, .section-heading h2 span, .about-copy h2 span, .connect-panel h2 span
 .spark-two { left: 47px; bottom: 78px; color: var(--cyan); font-size: 20px; }
 
 .ticker { overflow: hidden; height: 47px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,255,255,.012); }
-.ticker-track { display: flex; width: max-content; height: 100%; align-items: center; gap: 29px; animation: ticker-scroll 38s linear infinite; color: #a39aac; font: 9px var(--mono); letter-spacing: .13em; }
+.ticker-track { display: flex; width: max-content; height: 100%; align-items: center; gap: 29px; animation: ticker-enter 1.4s ease-out both, ticker-scroll 38s linear 1.4s infinite; color: #a39aac; font: 9px var(--mono); letter-spacing: .13em; }
 .ticker-track b { color: var(--pink); font-size: 12px; font-weight: 400; }
+@keyframes ticker-enter { from { transform: translateX(100vw); } to { transform: translateX(0); } }
 @keyframes ticker-scroll { to { transform: translateX(-50%); } }
 
 .section-wrap { width: min(1180px, calc(100% - 64px)); margin: 0 auto; }
@@ -217,7 +216,6 @@ h1 > span, .section-heading h2 span, .about-copy h2 span, .connect-panel h2 span
   .site-nav.is-open { display: flex; flex-direction: column; }
   .site-nav a { padding: 13px 4px; border-bottom: 1px solid var(--line); }
   .site-nav a:last-child { border-bottom: 0; }
-  .site-nav .nav-github { margin: 7px 0; padding: 11px 4px; border: 0; }
   .hero { grid-template-columns: 1fr; gap: 20px; padding: 62px 0 46px; }
   .hero-copy { padding: 0; }
   .eyebrow { font-size: 9px; }
